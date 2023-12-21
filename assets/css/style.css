@@ -141,16 +141,36 @@ a:hover {
 }
 /**login*/
 .login-btn{
-  border:none;
-  outline:none;
-  color: #275360;
-  font-size:1rem;
-  font-weight:600;
-  padding:10px 18px;
-  border-radius: 3px;
-  cursor:pointer;
-  background: aquamarine;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+  color: black;
+  background: rgb(102, 255, 194);
+  border: 2px solid rgb(0, 64, 255);
 
+}
+
+.login-btn:hover{
+  color: black;
+  box-shadow: 0 0 5px #4dffb8,
+    0 0 25px #4dffb8, 0 0 50px #4dffb8,
+    0 0 100px #4dffb8, 0 0 200px #4dffb8;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 140px 0 60px 0;
+  }
+  .hero h3 {
+    font-size: 32px;
+  }
 }
 .blur-bg-overlay{
   position: fixed;
@@ -211,7 +231,7 @@ a:hover {
   
 }
 .login .form-details{
-  background: url("/Frontend/assets/img/b.png");
+  background: url("/Frontend/assets/img/bk3.png");
   background-size: cover;
   background-position: center;
 
@@ -900,7 +920,7 @@ form button:hover{
 }
 
 .navbar-default.navbar-trans .nav-link:before {
-  background-color: #2eca6a;
+  background-color: blue;
 }
 
 .navbar-default.navbar-trans .nav-link:hover {
@@ -1877,7 +1897,7 @@ form button:hover{
 
 .card-box-ico {
   padding: 1rem 3rem 1rem 2.5rem;
-  border: 5px solid #2eca6a;
+  border: 5px solid blue;
 }
 
 .card-box-ico span {
