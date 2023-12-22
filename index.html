@@ -25,8 +25,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script defer src="assets/js/mainjs.js"></script>
-  <script src="assets/js/auth/register.js" defer></script>
- 
+  <script src="assets/js/auth/register.js" type="module"></script>
+ <script type="module" src="assets/js/auth/login.js"></script>
   
 
 
@@ -77,7 +77,7 @@
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="bedrooms">Bedrooms</label>
-              <input type="number" class="form-control form-control-a" id="bedrooms" placeholder="Enter number of bedrooms" min="1">
+              <input type="number" class="form-control form-control-a" id="" placeholder="Enter number of bedrooms" min="1">
             </div>
           </div>
           </div>
@@ -158,9 +158,13 @@
         </ul>
         <button class="login-btn">Login</button>
       </div>
-        
+        <!--Notification-->
+        <div class="alert alert-success d-none" role="alert">
+        </div>
+        <div class="alert alert-danger d-none" role="alert">
+        </div>
       <!--Poput form-->
-      <form>
+      <form id="form_login">
       <div class="blur-bg-overlay"></div>
       <div class="form-popout">
 
@@ -174,16 +178,18 @@
           </div>
           <div class="form-content">
             <h2>LOGIN</h2>
+
+            
             <form action="#">
               <div class="input-field">
-                <input type="text" required>
+                <input type="email" id="Email" name="email">
                 <label>Email</label>
               </div>
               <div class="input-field">
-                <input type="password" required>
+                <input type="password" id="Password" name="password">
                 <label>Password</label>
               </div>
-              <a href="#" class="forgot-password">Forgot Password</a>
+             
               <button type="submit">Log in
               </button>
               <div class="bottom-link">Don't have and account?
