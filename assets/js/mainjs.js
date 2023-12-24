@@ -21,3 +21,4 @@ loginSignupLink.forEach(link => {
     formPopout.classList.toggle("show-signup", link.id === "signup-link");
   });
 });
+

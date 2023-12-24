@@ -1,6 +1,7 @@
-import { url, successNotification,errorNotification } from "../utils/util.js";
+import {backendURL, successNotification,errorNotification, } from "../utils/util.js";
 
 //Form Register
+
 
 const form_register = document.getElementById('form_register');
 
@@ -17,11 +18,12 @@ form_register.onsubmit = async (e) => {
     const formData = new FormData(form_register);
 
 //fetch api user register
-    const response = await fetch (url + "/api/user"
+    const response = await fetch (backendURL + "/api/user"
         , {
             method: "POST",
             header: {
                 Accept:"application/json",
+                
             },
             body:formData,
         });
