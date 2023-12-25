@@ -1,10 +1,3 @@
-/**
-* Template Name: EstateAgency
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -107,7 +100,7 @@ a:hover {
 }
 
 .text-brand {
-  color: #000000;
+  color: blue;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -197,7 +190,7 @@ a:hover {
   opacity:0;
   pointer-events: none;
   background: #fff;
-  border:2px solid #fff;
+  border:4px solid aquamarine;
   transform:translate(-50%, -100%);
 
 }
@@ -230,11 +223,19 @@ a:hover {
   justify-content: center;
   
 }
-.login .form-details{
-  background: url("/Frontend/assets/img/bk3.png");
+
+.login .form-details {
+  position: relative;
+  background: url("/Frontend/assets/img/d.png");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
 
+
+.login .form-details h2 {
+  color: white; 
+  z-index: 1; 
 }
 .signup .form-details{
   background: url("/Frontend/assets/img/d.png");
@@ -243,6 +244,7 @@ a:hover {
   
 
 }
+
 .form-box .form-details h2{
 color:#fff;
 }
@@ -363,6 +365,7 @@ form button:hover{
     padding:30px 20px;
   }
 }
+
 
 /*------/ Nav Pills  /------*/
 .nav-pills-a {
@@ -2048,17 +2051,18 @@ form button:hover{
 }
 
 .book-now-btn {
-  background-color: Aqua;
-  color: blue; 
-  padding: 10px 20px; 
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px; 
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+  justify-content: center;
 }
 
 .book-now-btn:hover {
-  background-color: DarkCyan; 
+  background-color: black;
 }
 /*--------------------------------------------------------------
 # About Section

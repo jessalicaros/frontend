@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>HomeHaven- Index</title>
+  <title>Property-grid</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -30,88 +30,96 @@
 
 <body>
 
-  <!-- ======= Property Search Section ======= -->
-  <div class="click-closed"></div>
-  <!--/ Form Search Star /-->
-  <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
-    </div>
-    <span class="close-box-collapse right-boxed bi bi-x"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label class="pb-2" for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="Type">Status</label>
-              <select class="form-control form-select form-control-a" id="Type">
-                <option>All Status</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="city">Address</label>
-              <select class="form-control form-select form-control-a" id="city">
-                <option>All City</option>
-                <option>Taguibo,Ampayon </option>
-                <option>Ampayon</option>
-                <option>Butuan City</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Bedrooms</label>
-              <input type="number" class="form-control form-control-a" id="bedrooms" placeholder="Enter number of bedrooms" min="1">
-            </div>
-          </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Garages</label>
-              <input type="number" class="form-control form-control-a" id="bedrooms" placeholder="Enter number of Garages" min="1">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bathrooms">Bathrooms</label>
-              <select class="form-control form-select form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="price">Min Price</label>
-              <select class="form-control form-select form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
+<!-- ======= Property Search Section ======= -->
+<div class="click-closed"></div>
+<!--/ Form Search Star /-->
+<div class="box-collapse">
+  <div class="title-box-d">
+    <h3 class="title-d">Search Property</h3>
+  </div>
+  <span class="close-box-collapse right-boxed bi bi-x"></span>
+  <div class="box-collapse-wrap form">
+    <form class="form-a">
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <div class="form-group">
+            <label class="pb-2" for="keyword">Keyword</label>
+            <input type="text" class="form-control form-control-lg form-control-a" id="keyword" placeholder="Keyword">
           </div>
         </div>
-      </form>
-    </div>
-  </div><!-- End Property Search Section -->>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="propertyType">Property Type</label>
+            <select class="form-control form-select form-control-a" id="propertyType">
+              <option>All Types</option>
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Condo</option>
+              <option>Land</option>
+             
+            </select>
+          </div>
+        </div>
+      
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="address">Address</label>
+            <input type="text" class="form-control form-control-a" id="address" placeholder="Address">
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bedrooms">Bedrooms</label>
+            <input type="number" class="form-control form-control-a" id="bedrooms" placeholder="Number of Bedrooms" min="1">
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bathrooms">Bathrooms</label>
+            <select class="form-control form-select form-control-a" id="bathrooms">
+              <option>Any</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="squareFootage">Square Footage</label>
+            <input type="number" class="form-control form-control-a" id="squareFootage" placeholder="Square Footage" min="1">
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="price">Listing Price</label>
+            <select class="form-control form-select form-control-a" id="price">
+              <option>Unlimited</option>
+              <option>$50,000</option>
+              <option>$100,000</option>
+              <option>$150,000</option>
+              <option>$200,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="status">Status</label>
+            <select class="form-control form-select form-control-a" id="status">
+              <option>All Status</option>
+              <option>For Rent</option>
+              <option>For Sale</option>
+              <option>Open House</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-b">Search Property</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div><!-- End Property Search Section -->
 
   <!-- ======= Header/Navbar ======= -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -206,19 +214,19 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-1.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p1.1 (1).png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Bella Model House
+                    
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">rent |₱18,875.00</span>
                     </div>
                     <a href="property-single.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
@@ -228,8 +236,7 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>53 sqm.
                         </span>
                       </li>
                       <li>
@@ -253,21 +260,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-3.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p2 (1).png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Dani Model House
+                    
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">sale | ₱18,900.00</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property-single2.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>
@@ -275,8 +282,8 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>53 sqm.
+                      
                         </span>
                       </li>
                       <li>
@@ -300,21 +307,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-6.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p3 (1).png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Greta Model House
+                
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">rent | ₱11,900.00</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property-single3.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>
@@ -322,17 +329,17 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>166 sqm.
+                    
                         </span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Beds</h4>
-                        <span>2</span>
+                        <span>5</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Baths</h4>
-                        <span>4</span>
+                        <span>3</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Garages</h4>
@@ -347,21 +354,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-7.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p4.png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Freya Model House
+            
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">rent | ₱16,900.00</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property-single4.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>
@@ -369,17 +376,17 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>142 sqm.
+                    
                         </span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Beds</h4>
-                        <span>2</span>
+                        <span>3</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Baths</h4>
-                        <span>4</span>
+                        <span>1</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Garages</h4>
@@ -394,21 +401,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-8.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p5 (1).png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Cara Model House
+                      
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">sale | 18,875.00</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property-single5.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>
@@ -416,17 +423,17 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>66 sqm.
+                  
                         </span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Beds</h4>
-                        <span>2</span>
+                        <span>3</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Baths</h4>
-                        <span>4</span>
+                        <span>2</span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Garages</h4>
@@ -441,21 +448,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="assets/img/property-10.jpg" alt="" class="img-a img-fluid">
+                <img src="assets/img/properties/p6 (1).png" alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br /> Olive Road Two</a>
+                      <a href="#">Ella Model House
+                    
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">rent | 20,875.00</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property-single6.html" class="link-a">Click here to view
                       <span class="bi bi-chevron-right"></span>
                     </a>
                   </div>
@@ -463,8 +470,8 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <span>240m
+                          
                         </span>
                       </li>
                       <li>
@@ -486,33 +493,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <nav class="pagination-a">
-              <ul class="pagination justify-content-end">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1">
-                    <span class="bi bi-chevron-left"></span>
-                  </a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item next">
-                  <a class="page-link" href="#">
-                    <span class="bi bi-chevron-right"></span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+       
       </div>
     </section><!-- End Property Grid Single-->
 
@@ -536,19 +517,17 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="about.html">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="property-grid.html">Property</a>
               </li>
+          
               <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
               </li>
             </ul>
           </nav>

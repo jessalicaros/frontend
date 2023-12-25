@@ -1,9 +1,8 @@
 function setRouter() {
  switch (window.location.pathname) {
     // If you are logged in you cant access outside pages; redirect to dashboard
-    case "/":
-    case "/index.html":
-    case "/register.html":
+    case "/userDashboard.html":
+
       if (localStorage.getItem("token")) {
         window.location.pathname = "/userDashboard.html";
       }
@@ -11,8 +10,7 @@ function setRouter() {
 
     // If you are not logged in you cant access dashboard pages; redirect to /
     case "/userDashboard.html":
-    case "/presentation.html":
-    case "/slides.html":
+  
       if (!localStorage.getItem("token")) {
         window.location.pathname = "/";
       }

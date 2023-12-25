@@ -1,11 +1,8 @@
-
-"use strict";
-
 import {backendURL} from "../utils/util.js";
 
 const btn_logout = document.getElementById("btn_logout");
 
-btn_logout = async() => {
+btn_logout.onclick = async() => {
 
     //Access logout api endpoint
     const response = await fetch (backendURL + "/api/logout", {
@@ -21,7 +18,7 @@ btn_logout = async() => {
         //get response if 200-299 status code
         if (response.ok) {
             localStorage.clear();
-            window.location.pathname = "/index.html";
+            window.location.pathname = "/Frontend/index.html";
         }
         //get response if 422 status code
         else {

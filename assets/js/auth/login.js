@@ -16,7 +16,7 @@ form_login.onsubmit = async (e) => {
     //get values of form
     const formData = new FormData(form_login);
 
-//fetch api user register
+//fetch api user login
     const response = await fetch (backendURL + "/api/login"
         , {
             method: "POST",
@@ -36,9 +36,7 @@ form_login.onsubmit = async (e) => {
             localStorage.setItem("token", json.token);
             form_login.reset();
         
-            successNotification("Successfully logged in account", 5);
-        
-            window.location.href = "userDashboard.html";
+            window.location.href = "/Frontend/userDashboard.html";
         }
         //get response if 422 status code
         else if (response.status ==422){
