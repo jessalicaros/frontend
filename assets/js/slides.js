@@ -38,7 +38,15 @@ async function getDatas() {
         Accept: "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
     },
+
 });
+
+if (!response.ok) {
+    console.error(`Error: ${response.status} - ${response.statusText}`);
+    // Handle the error accordingly
+    return;
+}
+
 
   // Get response if 200-299 status code
   if (response.ok) {

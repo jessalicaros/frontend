@@ -28,27 +28,61 @@ form_login.onsubmit = async (e) => {
 
 
 
-        //get response if 200-299 status code
-        if (response.ok) {
-            const json = await response.json();
-            console.log(json);
-        
-            localStorage.setItem("token", json.token);
-            form_login.reset();
-        
-            window.location.href = "/Frontend/userDashboard.html";
-        }
-        //get response if 422 status code
-        else if (response.status ==422){
-            const json = await response.json();
+const form_login = document.getElementById("form_login");
 
-        
-            errorNotification(json.message, 5);
-        }
+form_login.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        //enable button
+    // disable the button during the login process
+    document.querySelector("#form_login button").disabled = true;
+    document.querySelector("#form_login button").innerHTML = 'Logging in...';
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Simulate predefined email and password for an admin user
+    const predefinedAdminEmail = "manager@gmail.com";
+    const predefinedAdminPassword = "managerpassword";
+
+    try {
+        // Check if provided credentials match the predefined admin credentials
+        if (email === predefinedAdminEmail && password === predefinedAdminPassword) {
+            // Simulate a successful login
+            localStorage.setItem("token", "admin-token");
+
+            // Redirect to the admin dashboard
+            window.location.href = "/Frontend/Manager/dashboard.html";
+        } else {
+            // Perform the actual fetch request to the backend for authentication
+            const response = await fetch(backendURL + "/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
+            });
+
+            if (response.ok) {
+                // Redirect to the user dashboard
+                window.location.href = "/Frontend/userDashboard.html";
+            } else if (response.status === 422) {
+                const json = await response.json();
+                errorNotification(json.message, 5);
+            } else {
+                // Handle other error cases
+                console.error(`Error: ${response.status} - ${response.statusText}`);
+            }
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+        // Handle the error or display a notification as needed
+    } finally {
+        // enable the button after the login attempt
         document.querySelector("#form_login button").disabled = false;
-        document.querySelector("#form_login button").innerHTML = 'log in';
-        
-};
-
+        document.querySelector("#form_login button").innerHTML = 'Log in';
+    }
+});
+}
