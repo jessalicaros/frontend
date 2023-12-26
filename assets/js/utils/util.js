@@ -2,7 +2,7 @@ import { setRouter }  from "../router/router.js";
 
 setRouter();
 //backend url
-const backendURL="https://f6bf-103-169-69-142.ngrok-free.app";
+const backendURL="https://4cf7-103-169-69-199.ngrok-free.app";
 
 
 function successNotification(message, seconds=0){

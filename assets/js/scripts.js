@@ -1,3 +1,22 @@
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Toggle the side navigation
+  const sidebarToggle = document.body.querySelector("#sidebarToggle");
+  if (sidebarToggle) {
+    // Uncomment Below to persist sidebar toggle between refreshes
+    // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+    //     document.body.classList.toggle('sb-sidenav-toggled');
+    // }
+    sidebarToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.toggle("sb-sidenav-toggled");
+      localStorage.setItem(
+        "sb|sidebar-toggle",
+        document.body.classList.contains("sb-sidenav-toggled")
+      );
+    });
+  }
+});
+
 var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
@@ -79,18 +98,17 @@ function readInfo(pic, firstname, lastname, email) {
 
 
 
-function editInfo(index, pic, Firstname,Lastname,Email){
-    isEdit = true
-    editId = index
-    imgInput.src = pic
-    userName.value = Firstname
-    userName.value = Lastname
-    email.value = Email,
+function editInfo(index, pic, Firstname, Lastname, Email) {
+    isEdit = true;
+    editId = index;
+    imgInput.src = pic;
+    userfirstName.value = Firstname;  // Corrected from userName.value
+    userlastName.value = Lastname;
+    email.value = Email;  // Corrected from email.value,
 
-    submitBtn.innerText = "Update"
-    modalTitle.innerText = "Update The Form"
+    submitBtn.innerText = "Update";
+    modalTitle.innerText = "Update The Form";
 }
-
 
 function deleteInfo(index){
     if(confirm("Are you sure want to delete?")){
@@ -133,3 +151,4 @@ form.addEventListener('submit', (e)=> {
     // modal.style.display = "none"
     // document.querySelector(".modal-backdrop").remove()
 })
+
