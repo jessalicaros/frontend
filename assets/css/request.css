@@ -6,16 +6,16 @@ body {
     justify-content: left;
     align-items: center;
     height: 100vh;
-    background-image: url("/assets/img/bg3.png");
+    background-image: url("/Frontend/assets/img/bg3.png");
     background-size: cover;
     background-position: left;
 }
 .white-background {
     background-color: #fff;
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 8px; /* Optional: Add rounded corners */
+    padding: 20px; 
+    border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Optional: Add margin for spacing */
+    margin-top: 20px; 
   }
 
 .container {
