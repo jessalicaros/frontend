@@ -31,17 +31,17 @@ import {
         const date = new Date(element.created_at).toLocaleString();
   
         container += `<div class="col-sm-12">
-        <div class="card w-100 mt-3" data-id="${element.user_id}">
+        <div class="card w-100 mt-3" data-id="${element.request_id}">
             <div class="col-sm-8">
                 <div class="card-body">
                     <div class="dropdown float-end">
                         <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu">
                         <li>
-                        <a class="dropdown-item" href="#" id="btn_edit" data-id="${element.user_id}">Edit</a>
+                        <a class="dropdown-item" href="#" id="btn_edit" data-id="${element.request_id}">Edit</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#" id="btn_delete" data-id="${element.user_id}">Delete</a>
+                        <a class="dropdown-item" href="#" id="btn_delete" data-id="${element.request_id}">Delete</a>
                     </li>
                         </ul>
                     </div>
@@ -102,6 +102,7 @@ import {
                           </a>
                       </li>`;
       });
+      
       // Use the container to display the fetch data
       document.getElementById("get_pagination").innerHTML = pagination;
   
@@ -145,45 +146,25 @@ import {
   
     //Check key/value pairs of FormData; Uncomment to debug
     for (let [name, value] of formData) {
-      console.log(`${name} = ${value}`); // key1 = value1, then key2 = value2
+       console.log(`${name} = ${value}`); // key1 = value1, then key2 = value2
     }
   
-    let response;
-    // Check if for_update_id is empty, if empty then it's create, else it's update
-    if (for_update_id == "") {
-      // Fetch API Carousel Item Store Endpoint
-      response = await fetch(backendURL + "/api/request_form", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          Authorization: "Bearer " + localStorage.getItem("token"),
-        },
-        body: formData,
-      });
-    }
-    // for Update
-    else {
-      // Add Method Spoofing to cater Image upload coz you are using FormData; Comment if no Image upload
-      formData.append("_method", "PUT");
-      // Fetch API Carousel Item Update Endpoint
-      response = await fetch(backendURL + "/api/request_form" + for_update_id, {
-        method: "POST", // Change to PUT/PATCH if no Image Upload
-        headers: {
-          Accept: "application/json",
-          Authorization: "Bearer " + localStorage.getItem("token"),
-        },
-        // Comment body below; if with Image Upload; form-data equivalent
-        body: formData,
-        // Uncomment body below; if no Image Upload; form-urlencoded equivalent
-        // body: new URLSearchParams(formData)
-      });
-    }
-  
+    //Fetch api Request store Endpoint
+    const response = await fetch(backendURL + "/api/request_form",{
+      method:"POST",
+      headers: {
+        Accept: "application/json",
+        Authorization: "Bearer" + localStorage.getItem("token"),
+
+      },
+      body:formData,
+
+    });
     // Get response if 200-299 status code
     if (response.ok) {
       // Uncomment for debugging purpose
-      // const json = await response.json();
-      // console.log(json);
+      const json = await response.json();
+      console.log(json);
   
       // Reset Form
       form_slides.reset();
@@ -196,7 +177,7 @@ import {
       );
   
       // Close Modal Form
-      document.getElementById("modal_close").click();
+      //document.getElementById("modal_close").click();
   
       // Reload Page
       getDatas();
@@ -206,7 +187,7 @@ import {
       const json = await response.json();
   
       // Close Modal Form
-      document.getElementById("modal_close").click();
+      //document.getElementById("modal_close").click();
   
       errorNotification(json.message, 10);
     }
@@ -231,7 +212,7 @@ import {
         "red";
   
       // Fetch API Carousel Item Delete Endpoint
-      const response = await fetch(backendURL + "/api/carousel/" + id, {
+      const response = await fetch(backendURL + "/api/request_form/" + id, {
         method: "DELETE",
         headers: {
           Accept: "application/json",
